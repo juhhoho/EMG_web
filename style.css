@@ -1,0 +1,76 @@
+img {
+    float: bottom;
+    width: 700px;
+    height: 400px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+#user-info {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 10px; 
+    margin-bottom: 2px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#login-container {
+    width: 50%;  /* Adjust as needed */
+}
+
+article {
+    width: 40%;  /* Adjust as needed */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#right-top-section {
+    text-align: left;
+}
+
+#right-top-section h2, #right-top-section form {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#upload-btn-container {
+    display: flex;
+    gap: 20px;
+}
+
+html {
+    overflow-y: scroll;
+}
+.column-container {
+    display: flex;
+}
+.left-column, .right-column {
+    flex: 1;
+    padding: 10px;
+}
+.right-column {
+    border-left: 1px solid black;
+}
