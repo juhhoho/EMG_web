@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // 그래프 그리기 버튼을 클릭한 경우
         $dataFilePath = $target_file; // 업로드된 데이터 파일의 경로
         $currentDateTime = date("Y-m-d_H-i-s");
-        $outputFileName = $_SESSION["userInfo"][0] . "_" . $currentDateTime . ".png";
+        $outputFileName = $_SESSION["userInfo"][0] . "_" . $userInfo[1]. "_" . $currentDateTime . ".png";
         $outputFilePath = "act1_upload_data/" . $outputFileName;
 
         $command = 'python draw_graph.py "' . $dataFilePath . '" "' . $outputFilePath . '"';
@@ -93,14 +93,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </form>
                     </div>
                     <div id="upload-btn-container">
-                        <ul>
-                            <li>
-                                <form action="drawGraph.php" method="post">
-                                    <input type="hidden" name="dataToUpload" value="<?php echo $target_file; ?>">
-                                    <input type="submit" value="그래프 그리기" class="button-link">
-                                </form>
-                            </li>
-                        </ul>
+                        
+                        <form action="drawGraph1.php" method="post">
+                            <input type="hidden" name="dataToUpload" value="<?php echo $target_file; ?>">
+                            <input type="submit" value="그래프 그리기" class="button-link">
+                        </form>
+                            
+                        
                         <?php if (!empty($uploadedFileName)): ?>
                             <p>업로드된 파일: <?php echo $uploadedFileName; ?></p>
                             <p>파일 내용:</p>
